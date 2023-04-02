@@ -1,0 +1,38 @@
+package tech.ada.projetoweb2.mapper;
+
+import org.springframework.stereotype.Component;
+import tech.ada.projetoweb2.dto.EditoraDTO;
+import tech.ada.projetoweb2.model.Editora;
+
+import java.util.List;
+
+@Component
+public class EditoraMapper {
+
+    public Editora updateEditora(EditoraDTO editora){
+        Editora editoraEntity = new Editora();
+        editoraEntity.setId(editora.getId());
+        editoraEntity.setNome(editora.getNome());
+        return editoraEntity;
+    }
+
+    public EditoraDTO updateEditora(Editora editora){
+        EditoraDTO editoraDTO= new EditoraDTO();
+        editoraDTO.setId(editora.getId());
+        editoraDTO.setNome(editora.getNome());
+        return editoraDTO;
+    }
+
+    public List<Editora> updateListEditoraDTO(List<EditoraDTO> listEditoraDTO){
+        return listEditoraDTO.stream()
+                .map(categoriaDTO -> this.updateEditora(categoriaDTO))
+                .toList();
+    }
+
+    public List<EditoraDTO> updateListEditoraEntity(List<Editora> listEditoraEntity){
+        return listEditoraEntity.stream()
+                .map(categoria -> this.updateEditora(categoria))
+                .toList();
+    }
+}
+
