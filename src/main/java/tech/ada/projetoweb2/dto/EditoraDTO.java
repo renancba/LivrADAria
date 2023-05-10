@@ -3,8 +3,10 @@ package tech.ada.projetoweb2.dto;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 public class EditoraDTO {
 
     private Long id;

@@ -13,6 +13,7 @@ public class EditoraMapper {
         Editora editoraEntity = new Editora();
         editoraEntity.setId(editora.getId());
         editoraEntity.setNome(editora.getNome());
+        editoraEntity.setDescricao(editora.getDescricao());
         return editoraEntity;
     }
 
@@ -20,6 +21,7 @@ public class EditoraMapper {
         EditoraDTO editoraDTO= new EditoraDTO();
         editoraDTO.setId(editora.getId());
         editoraDTO.setNome(editora.getNome());
+        editoraDTO.setDescricao(editora.getDescricao());
         return editoraDTO;
     }
 

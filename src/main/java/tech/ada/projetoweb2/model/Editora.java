@@ -20,7 +20,7 @@ public class Editora {
     @Column(name = "descricao")
     private String descricao;
 
-    @OneToMany(mappedBy = "editora")
+    @OneToMany
     private List<Livro> livros;
 
 }
