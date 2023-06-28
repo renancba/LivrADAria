@@ -15,7 +15,7 @@ Certifique-se de ter os seguintes requisitos instalados em seu ambiente de desen
 1. Clone este repositório em seu ambiente local:
 
 ```
-git clone <url_do_repositorio>
+git clone https://github.com/renancba/LivrADAria.git
 ```
 
 2. Navegue até o diretório do projeto:
